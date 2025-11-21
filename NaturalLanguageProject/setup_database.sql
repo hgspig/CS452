@@ -27,7 +27,8 @@ CREATE TABLE Lab (
 
 CREATE TABLE Person (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
+    firstName TEXT NOT NULL,
+    lastName TEXT NOT NULL,
     departmentID INTEGER,
     areaOfResearch TEXT,
     personType TEXT CHECK(personType IN ('professor','undergraduateStudent','graduateStudent','faculty')),
@@ -99,35 +100,35 @@ INSERT INTO Lab (name, departmentID) VALUES
     ('Additive Manufacturing Lab', 6);
 
 -- People
-INSERT INTO Person (name, departmentID, areaOfResearch, personType) VALUES 
+INSERT INTO Person (firstName, lastName, departmentID, areaOfResearch, personType) VALUES 
     -- Computer Science professors (original + new)
-    ('Parris Egbert', 1, 'Interactive 3D graphics and virtual environments', 'professor'),
-    ('Casey Deccio', 1, 'Network measurement and anti-abuse for Internet stability and security', 'professor'),
-    ('Kent Seamons', 1, '', 'professor'),
-    ('Nancy Fulda', 1, '', 'professor'),
-    ('Quinn Snell', 1, 'High-performance computing and bioinformatics', 'professor'),
-    ('Mark Clement', 1, 'Computational biology and genealogy technology', 'professor'),
-    ('Michael Jones', 1, 'Computer vision and 3D reconstruction', 'professor'),
-    ('Dan Ventura', 1, 'Artificial intelligence and computational creativity', 'professor'),
-    ('Charles Knutson', 1, 'Software engineering and mobile computing', 'professor'),
-    ('Dennis Ng', 1, 'Human-computer interaction and educational technologies', 'professor'),
+    ('Parris','Egbert', 1, 'Interactive 3D graphics and virtual environments', 'professor'),
+    ('Casey','Deccio', 1, 'Network measurement and anti-abuse for Internet stability and security', 'professor'),
+    ('Kent','Seamons', 1, '', 'professor'),
+    ('Nancy','Fulda', 1, '', 'professor'),
+    ('Quinn','Snell', 1, 'High-performance computing and bioinformatics', 'professor'),
+    ('Mark','Clement', 1, 'Computational biology and genealogy technology', 'professor'),
+    ('Michael','Jones', 1, 'Computer vision and 3D reconstruction', 'professor'),
+    ('Dan','Ventura', 1, 'Artificial intelligence and computational creativity', 'professor'),
+    ('Charles','Knutson', 1, 'Software engineering and mobile computing', 'professor'),
+    ('Dennis','Ng', 1, 'Human-computer interaction and educational technologies', 'professor'),
 
     -- Mechanical Engineering professors
-    ('Spencer Magleby', 6, 'Compliant mechanisms and product design', 'professor'),
-    ('Brian Iverson', 6, 'Heat transfer and energy systems', 'professor'),
-    ('David Fullwood', 6, 'Micromechanics and materials science', 'professor'),
-    ('Andrew Merryweather', 6, 'Biomechanics and human safety', 'professor'),
-    ('Scott Thomson', 6, 'Aeroacoustics and fluid mechanics', 'professor'),
-    ('Jeremy Lee', 6, 'Robotics, control, and dynamic systems', 'professor'),
+    ('Spencer','Magleby', 6, 'Compliant mechanisms and product design', 'professor'),
+    ('Brian','Iverson', 6, 'Heat transfer and energy systems', 'professor'),
+    ('David','Fullwood', 6, 'Micromechanics and materials science', 'professor'),
+    ('Andrew','Merryweather', 6, 'Biomechanics and human safety', 'professor'),
+    ('Scott','Thomson', 6, 'Aeroacoustics and fluid mechanics', 'professor'),
+    ('Jeremy','Lee', 6, 'Robotics, control, and dynamic systems', 'professor'),
 
     -- Students
-    ('Bob', 2, 'Genetics', 'graduateStudent'),
-    ('Alice Johnson', 1, 'Machine learning applications in cybersecurity', 'graduateStudent'),
-    ('Ethan Park', 1, '3D rendering optimization', 'undergraduateStudent'),
-    ('Sofia Reyes', 1, 'Human-centered computing', 'graduateStudent'),
-    ('Liam Chen', 6, 'Additive manufacturing techniques', 'graduateStudent'),
-    ('Noah Miller', 6, 'Robotics kinematics', 'undergraduateStudent'),
-    ('Grace Lee', 6, 'Thermal analysis in fluid systems', 'graduateStudent');
+    ('Bob', '', 2, 'Genetics', 'graduateStudent'),
+    ('Alice','Johnson', 1, 'Machine learning applications in cybersecurity', 'graduateStudent'),
+    ('Ethan','Park', 1, '3D rendering optimization', 'undergraduateStudent'),
+    ('Sofia','Reyes', 1, 'Human-centered computing', 'graduateStudent'),
+    ('Liam','Chen', 6, 'Additive manufacturing techniques', 'graduateStudent'),
+    ('Noah','Miller', 6, 'Robotics kinematics', 'undergraduateStudent'),
+    ('Grace','Lee', 6, 'Thermal analysis in fluid systems', 'graduateStudent');
 
 -- Buildings
 INSERT INTO Building (name, constructionCompleted, floorCount) VALUES
