@@ -7,3 +7,5 @@ In order to run this code, create a secrets.py file and add a line with `OPENAPI
 
 Here's an example of the interface:
 ![Example](image.png)
+
+Here's an entity-relationship diagram for the project: ![Diagram](image-1.png)
