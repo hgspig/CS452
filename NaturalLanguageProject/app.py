@@ -22,15 +22,23 @@ print("Connected to database!")
 #get SQL from GPT
 def get_sql_from_gpt(question, schema):
     prompt = f"""
-		You are a helpful assistant that converts English questions into SQL queries.
-		Here is the schema of the bakery database:
+        You convert English questions into SQL for SQLite.
 
-		{schema}
+        Follow this required format:
+        1. Identify relevant tables (but DO NOT include this in the final output).
+        2. Identify relevant columns (but DO NOT include this in the final output).
+        3. Plan joins (but DO NOT include this in the final output).
+        4. Then output ONLY the final SQL query.
 
-		Question: {question}
+        Schema:
+        {schema}
 
-		Write only the SQL query that answers the question.
-		"""
+        User question: {question}
+
+        If the question contains titles such as professor or dr. treat them as a title and not as a name.
+
+        Final answer: ONLY the SQL query.
+        """
     response = client.chat.completions.create(
         model="gpt-4o-mini",  # cheaper + fast, perfect for this
         messages=[
@@ -90,7 +98,8 @@ Lab (
 
 Person (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
+    firstName TEXT NOT NULL,
+    lastName TEXT NOT NULL,
     departmentID INTEGER,
     areaOfResearch TEXT,
     personType TEXT CHECK(personType IN ('professor','undergraduateStudent','graduateStudent','faculty')),
