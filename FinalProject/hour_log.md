@@ -9,6 +9,7 @@
 | 12/03 | 1 | Presenting about project and trying to split answers |
 | 12/03 | .75 | More splitting answers |
 | 12/04 | 3 | Finished splitting answers into a structured JSON files |
+| 12/05 | | Project assignments | 
 | **Total** | **13.75** | |
 
 
