@@ -9,8 +9,8 @@
 | 12/03 | 1 | Presenting about project and trying to split answers |
 | 12/03 | .75 | More splitting answers |
 | 12/04 | 3 | Finished splitting answers into a structured JSON files |
-| 12/05 | | Project assignments | 
-| **Total** | **13.75** | |
+| 12/05 | 7.5 | Structuring citations in JSON file. Restructuring citation files. Running initial grader (not the best results) | 
+| **Total** | **21.25** | |
 
 
 
@@ -18,6 +18,6 @@
 splitting student responses, checking for AI usage, vectors not transforming/working
 
 Plan:
-set up a repo that reads recipts
+set up a repo that reads reciepts
 Set up a repo that allows you to scan a photo, send it to a computer, and then 
 Computer vision with hands to create a mouse?
