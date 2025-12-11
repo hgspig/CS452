@@ -10,7 +10,11 @@
 | 12/03 | .75 | More splitting answers |
 | 12/04 | 3 | Finished splitting answers into a structured JSON files |
 | 12/05 | 7.5 | Structuring citations in JSON file. Restructuring citation files. Running initial grader (not the best results) | 
-| **Total** | **21.25** | |
+| 12/10 | 1 | More grading/testing |
+| 12/10 | .75 | Making class presentation |
+| 12/10 | 1.5 | Project documentation |
+
+| **Total** | **23** | |
 
 
 
